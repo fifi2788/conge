@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <a href="view/personne/new.php">Creer un nouvel employe</a>
+        <a href="process/conge/liste_type.php">Type de conge</a>
         <table>
             <thead>
                 <tr>
