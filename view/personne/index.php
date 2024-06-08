@@ -10,6 +10,7 @@
     <div class="container">
         <a href="view/personne/new.php">Creer un nouvel employe</a>
         <a href="process/conge/liste_type.php">Type de conge</a>
+        <a href="process/jour_ferie/liste.php">Jours feries</a>
         <table>
             <thead>
                 <tr>
