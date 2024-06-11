@@ -14,6 +14,13 @@ CREATE TABLE `conge`.`personne` (
   `deductible` INT NULL,
   PRIMARY KEY (`id`));
 
+  CREATE TABLE `conge`.`jour_ferie` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `date` DATE NOT NULL,
+  `description` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
 
 INSERT INTO `conge`.`personne` (`nom`, `prenom`, `email`, `date_embauche`, `date_debauche`)VALUES ('Dupont', 'Jean', 'jean.dupont@gmail.com', '2022-01-01', NULL);
 INSERT INTO `conge`.`personne` (`nom`, `prenom`, `email`, `date_embauche`, `date_debauche`)VALUES ('Rabe', 'Koto', 'jean.dupont@gmail.com', '2022-01-01', NULL);
@@ -32,5 +39,18 @@ VALUES
   ('Congé maternité', 0),
   ('Congé paternité', 0),
   ('Congé sans solde', 1);
+
+INSERT INTO `conge`.`jour_ferie` (`date`, `description`)
+VALUES
+  ('2024-01-01', 'Nouvel An'),
+  ('2024-04-01', 'Lundi de Pâques'),
+  ('2024-05-01', 'Fête du Travail'),
+  ('2024-05-08', 'Victoire 1945'),
+  ('2024-07-14', 'Fête Nationale'),
+  ('2024-08-15', 'Assomption'),
+  ('2024-11-01', 'Toussaint'),
+  ('2024-11-11', 'Armistice 1918'),
+  ('2024-12-25', 'Noël');
+
 
 
