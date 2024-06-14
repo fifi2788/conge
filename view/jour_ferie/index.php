@@ -23,9 +23,9 @@
             foreach($jours_ferie as $jour_ferie){
             ?>
                 <tr>
-                    <td><?php echo $pers["date"]; ?></td>
+                    <td><?php echo $jour_ferie["date"]; ?></td>
                     <td><?php echo $jour_ferie["description"]; ?></td>
-                    <td><a href="../../conge/process/jour_ferie/remove.php?idx=<?php echo $pers["idp"]; ?>">&times;</a></td>
+                    <td><a href="../../conge/process/jour_ferie/remove.php?idx=<?php echo $jour_ferie["id"]; ?>">&times;</a></td>
                 </tr>
             <?php
             }
