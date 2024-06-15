@@ -53,4 +53,12 @@ VALUES
   ('2024-12-25', 'Noël');
 
 
-
+CREATE TABLE `conge`.`demandes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `id_type_conge` INT NOT NULL COMMENT 'le type de conge',
+  `id_personne` INT NOT NULL,
+  `debut_conge` DATE NOT NULL,
+  `fin_conge` DATE NOT NULL,
+  `commentaire` LONGTEXT NULL,
+  `date_creation` DATETIME NOT NULL DEFAULT now(),
+  PRIMARY KEY (`id`));

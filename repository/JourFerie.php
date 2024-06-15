@@ -1,12 +1,12 @@
 <?php 
 
-class Jour_ferie{
+class JourFerie{
     private $conn;
     public function __construct($conn){
         $this->conn=$conn;
     }
-    public function create($date,$description){
-        $sql="INSERT INTO `conge`.`jour_ferie` (`date`, `description`) VALUES ('$date', '$description');";
+    public function create($nom,$date){
+        $sql="INSERT INTO `conge`.`jour_ferie` (`date`, `description`) VALUES ('$date', '$nom');";
         $result=$this->conn->query($sql);
         return $result;
     }
@@ -19,7 +19,7 @@ class Jour_ferie{
 
     public function getAll(){
         $sql="SELECT id,date,description
-        FROM conge.;jour_ferie";
+        FROM conge.jour_ferie";
         $result=$this->conn->query($sql);
         $res=[]; //array()
         while($row=$result->fetch_assoc()){

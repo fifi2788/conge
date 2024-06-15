@@ -1,9 +1,9 @@
 <?php 
 include "../../config/connexion.php";
-include "../../repository/Jour_ferie.php";
-$jourferie=new Jour_ferie($conn);
+include "../../repository/JourFerie.php";
+$jourferie=new JourFerie($conn);
 $nom = $_POST["name"];
-$deductible = $_POST["deductible"];
-$typeConge->create($nom,$deductible);
+$date = $_POST["date"];
+$jourferie->create($nom,$date);
 
-header("Location: liste.jour.php");
+header("Location: liste_jour.php");

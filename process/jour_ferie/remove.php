@@ -1,8 +1,8 @@
 <?php 
 include "../../config/connexion.php";
-include "../../repository/jour_ferie.php";
-$personne=new Jour_ferie($conn);
-$id = $_GET["id"];
-$personne->delete($id);
+include "../../repository/JourFerie.php";
+$jour=new JourFerie($conn);
+$id = $_GET["idx"];
+$jour->delete($id);
 
-header("Location: ../../index.php");
+header("Location: liste_jour.php");
